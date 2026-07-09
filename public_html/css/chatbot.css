@@ -1,0 +1,102 @@
+/* chatbot.css */
+#chatbot-window {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.chatbot-hidden {
+    display: none !important;
+}
+
+.chatbot-header {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-header h4 {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'AR One Sans', sans-serif;
+}
+
+#close-chatbot {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#chatbot-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f4f4f4;
+}
+
+.chat-msg {
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'AR One Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.chat-msg.bot {
+    background-color: #e9ecef;
+    align-self: flex-start;
+    color: #333;
+    border-bottom-left-radius: 0;
+}
+
+.chat-msg.user {
+    background-color: #1a1a1a;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+}
+
+.faq-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.faq-btn {
+    background-color: #fff;
+    border: 1px solid #1a1a1a;
+    color: #1a1a1a;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'AR One Sans', sans-serif;
+    font-size: 13px;
+    text-align: left;
+    transition: all 0.2s;
+}
+
+.faq-btn:hover {
+    background-color: #1a1a1a;
+    color: #fff;
+}

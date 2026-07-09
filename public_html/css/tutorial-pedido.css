@@ -1,0 +1,41 @@
+#tutorial-order-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 20000;
+    pointer-events: none;
+}
+
+.tutorial-shade {
+    position: fixed;
+    background: rgba(10, 18, 12, .76);
+    backdrop-filter: blur(2px);
+    pointer-events: auto;
+}
+
+.tutorial-focus {
+    border-radius: 8px;
+    box-shadow: 0 0 0 5px rgba(255,255,255,.98), 0 0 0 10px rgba(148,201,115,.78), 0 0 32px 12px rgba(148,201,115,.5) !important;
+    animation: tutorial-focus-pulse 1.6s ease-in-out infinite;
+}
+
+#tutorial-order-tooltip {
+    position: fixed;
+    z-index: 20003;
+    width: min(330px, calc(100vw - 32px));
+    padding: 18px;
+    border-radius: 12px;
+    background: #fff;
+    color: #26342a;
+    box-shadow: 0 16px 42px rgba(0,0,0,.32);
+    font-family: "AR One Sans", sans-serif;
+}
+
+#tutorial-order-tooltip h2 { margin: 0 0 8px; color: #2f5233; font-size: 1rem; }
+#tutorial-order-tooltip p { margin: 0; font-size: .88rem; line-height: 1.45; }
+.tutorial-tooltip-actions { display: flex; justify-content: flex-end; margin-top: 15px; }
+.tutorial-cancel, .tutorial-finish { border: 0; border-radius: 7px; padding: 9px 12px; cursor: pointer; font: 700 .78rem "AR One Sans", sans-serif; }
+.tutorial-cancel { color: #4f5a51; background: #eef2ee; }
+.tutorial-finish { color: #fff; background: #2f5233; }
+
+@keyframes tutorial-focus-pulse { 50% { box-shadow: 0 0 0 5px rgba(255,255,255,.98), 0 0 0 13px rgba(148,201,115,.65), 0 0 40px 15px rgba(148,201,115,.58); } }
+@media (max-width: 560px) { #tutorial-order-tooltip { padding: 15px; } }
